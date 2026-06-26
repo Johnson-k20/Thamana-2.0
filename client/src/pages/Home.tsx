@@ -1,11 +1,13 @@
-import { useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import WireframeCube from '@/components/WireframeCube'
 import ServiceCard from '@/components/ServiceCard'
+import ServiceModal from '@/components/ServiceModal'
 import TeamCard from '@/components/TeamCard'
 import SectionHeading from '@/components/SectionHeading'
 import { stats, services, team } from '@/lib/data'
+import type { Service } from '@/lib/data'
 
 function AnimatedSection({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   const ref = useRef<HTMLDivElement>(null)
@@ -34,6 +36,19 @@ function AnimatedSection({ children, className = '' }: { children: React.ReactNo
 }
 
 export default function Home() {
+  const [selectedService, setSelectedService] = useState<Service | null>(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const handleLearnMore = (service: Service) => {
+    setSelectedService(service)
+    setIsModalOpen(true)
+  }
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false)
+    setTimeout(() => setSelectedService(null), 200)
+  }
+
   return (
     <div className="min-h-screen flex flex-col bg-gray-950 text-white">
       <Navbar />
@@ -108,7 +123,10 @@ export default function Home() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map((service, i) => (
                 <AnimatedSection key={service.id} className={`delay-${i * 100}`}>
-                  <ServiceCard service={service} />
+                  <ServiceCard
+                    service={service}
+                    onLearnMore={handleLearnMore}
+                  />
                 </AnimatedSection>
               ))}
             </div>
@@ -176,6 +194,13 @@ export default function Home() {
       </main>
 
       <Footer />
+
+      {/* Service Modal */}
+      <ServiceModal
+        service={selectedService}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
     </div>
   )
 }
