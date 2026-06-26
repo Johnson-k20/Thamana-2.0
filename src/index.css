@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  background-color: #000000;
+  background-color: #0a0f1f;
   color: #e5e7eb;
   font-family: 'Inter', system-ui, sans-serif;
   line-height: 1.6;
@@ -97,7 +97,7 @@ a, button {
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: #0a0f1f;
 }
 
 ::-webkit-scrollbar-thumb {

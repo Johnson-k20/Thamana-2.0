@@ -11,7 +11,7 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-gray-900">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0f1f]/95 backdrop-blur-sm border-b border-gray-800">
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
         <a href="#" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
@@ -71,7 +71,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-black border-t border-gray-900">
+        <div className="md:hidden bg-[#0a0f1f] border-t border-gray-800">
           <div className="container py-4 space-y-3">
             {navLinks.map((link) => (
               <a
