@@ -2,16 +2,13 @@ import { companyInfo } from '@/lib/data'
 
 export default function Footer() {
   return (
-    <footer className="bg-dark-900 border-t border-dark-800 py-12">
+    <footer className="bg-black border-t border-gray-900 py-12">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-cyan-400 rounded flex items-center justify-center text-dark-950 font-bold">
-                T
-              </div>
-              <span className="font-bold text-white">{companyInfo.name}</span>
+            <div className="mb-4">
+              <img src="/logo.jpeg" alt="Thamana Solutions" className="h-10 w-auto" />
             </div>
             <p className="text-sm text-gray-400">{companyInfo.location}</p>
             <p className="text-sm text-gray-400">Est. {companyInfo.founded}</p>
@@ -132,7 +129,7 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-dark-800 pt-8">
+        <div className="border-t border-gray-900 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-gray-400">
               © {new Date().getFullYear()} {companyInfo.name}. All rights reserved.

@@ -11,14 +11,11 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-dark-950/95 backdrop-blur-sm border-b border-dark-800">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-gray-900">
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 font-bold text-lg">
-          <div className="w-8 h-8 bg-cyan-400 rounded flex items-center justify-center text-dark-950 font-bold">
-            T
-          </div>
-          <span className="text-white">THAMANA SOLUTIONS</span>
+        <a href="#" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          <img src="/logo.jpeg" alt="Thamana Solutions" className="h-12 w-auto" />
         </a>
 
         {/* Desktop Navigation */}
@@ -38,7 +35,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           {/* Theme Toggle */}
           <button
-            className="p-2 hover:bg-dark-800 rounded transition-colors"
+            className="p-2 hover:bg-gray-900 rounded transition-colors"
             aria-label="Toggle theme"
           >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -74,7 +71,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-dark-900 border-t border-dark-800">
+        <div className="md:hidden bg-black border-t border-gray-900">
           <div className="container py-4 space-y-3">
             {navLinks.map((link) => (
               <a
