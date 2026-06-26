@@ -43,7 +43,7 @@ importers:
         specifier: ^5.48.0
         version: 5.48.0
       typescript:
-        specifier: ^5.4.5
+        specifier: ^5.9.3
         version: 5.9.3
       vite:
         specifier: ^5.2.11
