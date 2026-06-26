@@ -173,12 +173,12 @@ export const team: TeamMember[] = [
     id: 'emmanuel',
     name: 'Emmanuel Makori',
     title: 'CEO',
-    bio: 'Visionary leader with 10+ years of experience in technology innovation and business strategy. Passionate about building transformative solutions for East Africa.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
+    bio: 'Visionary leader with experience in technology innovation and business strategy. Passionate about building transformative solutions for East Africa.',
+    image: "/public/1.jpeg",
     social: {
       linkedin: 'https://linkedin.com',
       twitter: 'https://twitter.com',
-      email: 'emmanuel@thamanasolutions.com',
+      email: 'emmanuelmakobier@gmail.com',
     },
   },
   {
@@ -186,11 +186,11 @@ export const team: TeamMember[] = [
     name: 'Abdimalik Abdinoor',
     title: 'Marketing Manager',
     bio: 'Strategic marketer focused on brand growth and market expansion. Drives Thamana\'s vision across East Africa with creative campaigns and partnerships.',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop',
+    image: "/public/3.jpeg",
     social: {
       linkedin: 'https://linkedin.com',
       twitter: 'https://twitter.com',
-      email: 'abdimalik@thamanasolutions.com',
+      email: 'abdimalikabdinoor324@gmail.com',
     },
   },
   {
@@ -198,11 +198,11 @@ export const team: TeamMember[] = [
     name: 'Johnson Kuria',
     title: 'Product Manager',
     bio: 'Product-focused innovator dedicated to creating user-centric solutions. Leads product strategy and ensures every solution delivers measurable impact.',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop',
+    image: "/public/2.jpeg",
     social: {
       linkedin: 'https://linkedin.com',
       twitter: 'https://twitter.com',
-      email: 'johnson@thamanasolutions.com',
+      email: 'kuriajj7@gmail.com',
     },
   },
 ]
