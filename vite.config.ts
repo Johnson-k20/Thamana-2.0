@@ -15,19 +15,9 @@ export default defineConfig({
   server: {
     port: 5173,
     host: true,
-    allowedHosts: [
-      '.manuspre.computer',
-      '.manus.computer',
-      '.manus-asia.computer',
-      '.manuscomputer.ai',
-      '.manusvm.computer',
-      'localhost',
-      '127.0.0.1',
-    ],
   },
   build: {
     outDir: 'dist/public',
-    emptyOutDir: true,
     sourcemap: false,
     minify: 'terser',
   },
