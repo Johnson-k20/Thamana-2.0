@@ -16,6 +16,7 @@ export default defineConfig({
     port: 5173,
     host: true,
   },
+  publicDir: path.resolve(import.meta.dirname, "client", "public"),
   build: {
     outDir: 'dist',
     sourcemap: false,
