@@ -2,7 +2,6 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { fileURLToPath } from 'url'
 import { dirname, resolve } from 'path'
-import path from 'path'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -26,9 +25,9 @@ export default defineConfig({
       '127.0.0.1',
     ],
   },
-  publicDir: path.resolve(import.meta.dirname, "client", "public"),
   build: {
-    outDir: 'dist/public',
+    outDir: 'dist',
+    emptyOutDir: true,
     sourcemap: false,
     minify: 'terser',
   },
