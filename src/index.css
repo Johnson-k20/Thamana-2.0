@@ -21,6 +21,12 @@ body {
   min-height: 100vh;
 }
 
+/* Light mode */
+html.light body {
+  background: linear-gradient(135deg, #f8f9fa 0%, #f0f3f7 50%, #f8f9fa 100%);
+  color: #1f2937;
+}
+
 /* Geometric accent lines */
 body::before {
   content: '';
@@ -32,6 +38,10 @@ body::before {
   background: linear-gradient(90deg, transparent, #00d9ff, transparent);
   z-index: 1;
   pointer-events: none;
+}
+
+html.light body::before {
+  background: linear-gradient(90deg, transparent, #0088cc, transparent);
 }
 
 /* Animations */
@@ -228,10 +238,27 @@ body::before {
   background: linear-gradient(180deg, #00ffff, #00aaff);
 }
 
+html.light ::-webkit-scrollbar-track {
+  background: #f8f9fa;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #0088cc, #006699);
+}
+
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #00aaff, #0099dd);
+}
+
 /* Text selection */
 ::selection {
   background: rgba(0, 217, 255, 0.3);
   color: #00d9ff;
+}
+
+html.light ::selection {
+  background: rgba(0, 136, 204, 0.3);
+  color: #0088cc;
 }
 
 /* Geometric pattern background */

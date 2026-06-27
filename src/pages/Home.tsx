@@ -118,7 +118,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, idx) => (
-              <AnimatedSection key={service.id} style={{ animation: `fade-in-up 0.6s ease-out ${0.05 * idx}s both` }}>
+              <AnimatedSection key={service.id}>
                 <ServiceCard service={service} onLearnMore={handleLearnMore} />
               </AnimatedSection>
             ))}
@@ -142,7 +142,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {team.map((member, idx) => (
-              <AnimatedSection key={member.id} style={{ animation: `fade-in-up 0.6s ease-out ${0.1 * idx}s both` }}>
+              <AnimatedSection key={member.id}>
                 <TeamCard member={member} />
               </AnimatedSection>
             ))}
